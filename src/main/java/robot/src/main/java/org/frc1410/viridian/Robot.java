@@ -1,5 +1,5 @@
 package robot.src.main.java.org.frc1410.viridian;
-// PLEASE
+// W A K E  U P
 
 import framework.src.main.java.org.frc1410.framework.PhaseDrivenRobot;
 import framework.src.main.java.org.frc1410.framework.control.Controller;

@@ -1,3 +1,4 @@
+//### DON'T TOUCH ME!!!!!, If you're here your're doing something wrong. THis file should never need to be modified ever. If you need to 
 pluginManagement {
     repositories {
         mavenLocal()

@@ -2,6 +2,7 @@ import edu.wpi.first.gradlerio.GradleRIOPlugin
 
 plugins {
     id "java-library"
+    //Don't touch me!, this should be auto-upgraded by WPILIB when you run the project importer. If you need to downgrade, ensure you have the correct Libs.
     id "edu.wpi.first.GradleRIO" version "2025.3.2"
 }
 
@@ -10,7 +11,8 @@ group = "org.frc1410"
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
-def ROBOT_MAIN_CLASS = "robot.src.main.java.org.frc1410.rebuilt2026.Main"
+//This should read "robot.src.main.java.org.frc1410.viridian.Main" ON VIRIDIAN, if you're on a fork for an frc year, it should read: "//This should read "robot.src.main.java.org.frc1410.[projectname].Main" ON VIRIDIAN"
+def ROBOT_MAIN_CLASS = "robot.src.main.java.org.frc1410.viridian.Main"
 
 repositories {
     mavenCentral()
@@ -67,7 +69,7 @@ dependencies {
     implementation "it.unimi.dsi:fastutil:8.2.1"
     implementation "gov.nist.math:jama:1.0.3"
 
-    // WPILib new commands, unneeded but leave it here incase
+    // WPILib new commands hardcoding, unneeded but leave it here incase
     //def apiVersion = wpi.versions.wpilibVersion.get()
     //api "edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java:$apiVersion"
 }
@@ -78,7 +80,6 @@ wpi.sim.addDriverstation()
 
 // JAR configuration
 jar {
-    //dependsOn ":framework:build"
     from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
     manifest GradleRIOPlugin.javaManifest(ROBOT_MAIN_CLASS)
     duplicatesStrategy = DuplicatesStrategy.INCLUDE

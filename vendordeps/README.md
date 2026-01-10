@@ -1,2 +1,2 @@
-# Don't use me!
-Vendor deps don't go here! You're probably looking for `/robot/vendordeps`.
+# Use me!!
+All vendordeps go here, when you upgrade a project between years it WILL delete all your deps, go to the WPILib extension and reinstall the deps. If the newer dep doesn't exist yet, just give it a few hours-days.
